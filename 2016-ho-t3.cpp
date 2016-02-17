@@ -38,11 +38,14 @@ int main(){
 			}
 		}
 	}
-	for(int i=1;i<n;i++)	angry[out[i]]++;
+	for(int i=1;i<n;i++){
+		if(out[i]==INT_MAX)	continue;
+		angry[out[i]]++;
+	}
 	int sum=0;
 	for(int i=0;i<q;i++){
 		sum+=angry[i];
 		cout<<sum<<endl;
 	}
-	exit(0);
+	return 0;
 }
